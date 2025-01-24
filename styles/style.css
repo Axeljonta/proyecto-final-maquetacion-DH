@@ -9,6 +9,7 @@
     list-style: none;
     text-decoration: none; 
     color: white
+    
 }
 
 body{
@@ -27,15 +28,22 @@ header{
     align-items: center;
     justify-content: space-between; 
     padding: 15px 4%; 
-    background-color: transparent;}
+    background-color: transparent;
+}
 
 /* NAV */
 .logo{
     font-size: 28px;
-    font-weight: 700;}
+    font-weight: 700;
+}
 
 .header_nav{
-    display: flex;}
+    display: flex;
+}
+
+.header_nav.open{
+    right: 0;
+}
 
 .header_a{
     margin-left: 25px;
@@ -50,18 +58,14 @@ header{
     transition: all .5s ease;
 }
 
-#menu-toggle{
-    display: none;
-}
-
-.header_nav-toggle{
-    display: none;
-}
 
 .header_nav-icon{
+    display: none;
     font-size: 35px; 
     cursor: pointer;
     z-index: 150;
+    visibility: hidden;
+    opacity: 0;
 }
 
 /* HERO SECCION */
@@ -241,7 +245,8 @@ header{
     }
 
     .header_nav-icon{
-        display: block;
+        visibility: visible;
+        opacity: 100;
     }
 
     .hero_div-text{
